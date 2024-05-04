@@ -6,5 +6,4 @@ Algorithms Included
 2.DES (Data Encryption Standard)
 3.AES (Advanced Encryption Standard)
 
-Usage:
-Each algorithm is provided in its own directory, which contains both pseudocode and code examples. 
+
