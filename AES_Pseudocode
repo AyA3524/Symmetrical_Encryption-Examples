@@ -1,0 +1,41 @@
+function AES(plaintext, key)
+    // Key expansion
+    round_keys = key_expansion(key)
+    
+    // Initial round
+    state = add_round_key(plaintext, round_keys[0])
+
+    // Main rounds
+    for round = 1 to num_rounds - 1
+        state = substitute_bytes(state)
+        state = shift_rows(state)
+        state = mix_columns(state)
+        state = add_round_key(state, round_keys[round])
+
+    // Final round
+    state = substitute_bytes(state)
+    state = shift_rows(state)
+    state = add_round_key(state, round_keys[num_rounds])
+
+    return state
+
+// Other helper functions
+function key_expansion(key)
+    // Expand the initial key into round keys
+    // Return an array of round keys
+
+function substitute_bytes(state)
+    // Substitute each byte of the state using an S-box
+    // Return the resulting state
+
+function shift_rows(state)
+    // Shift the rows of the state matrix
+    // Return the resulting state
+
+function mix_columns(state)
+    // Mix the columns of the state matrix
+    // Return the resulting state
+
+function add_round_key(state, round_key)
+    // Add the round key to the state matrix
+    // Return the resulting state
